@@ -16,13 +16,13 @@ def divisao(x, y):
         return float(x) / float(y)
 
 def calculadora(numero1, numero2, operacao):
-    if operacao == '+' or operacao == 'adicao':
+    if operacao == '+' or operacao.lower() in ['adicao', 'adição', 'adiçao', 'adicão']:
         resultado = adicao(numero1, numero2)
-    elif operacao == '-' or operacao == 'subtracao':
+    elif operacao == '-' or operacao.lower() in ['subtracao', 'substração', 'substraçao', 'substracão']:
         resultado = subracao(numero1, numero2)
-    elif operacao == '*' or operacao == 'multiplicacao':
+    elif operacao == '*' or operacao.lower() in ['multiplicacao', 'multiplicação', 'multiplicaçao', 'multiplicacão']:
         resultado = multiplicacao(numero1, numero2)
-    elif operacao == '/' or operacao == 'divisao':
+    elif operacao == '/' or operacao.lower() in ['divisao', 'divisão']:
        resultado = divisao(numero1, numero2)
     else:
         resultado = 'Operação não implementada'
